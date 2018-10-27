@@ -10,9 +10,8 @@ public class InitArray{
 		int num = array.length; 
 		int counter = 0;
 		//store the numbers 2 to 20 in the 10 memory locations
-			//create a for loop and start the initialization with 2
 		System.out.println("Index Values");
-
+		//loops through the 10 memory locations and stores the even numbers in those locations
 		for(int i=1; i<=num; i++){
 			System.out.print(counter);
 			System.out.print("        ");
@@ -21,11 +20,5 @@ public class InitArray{
 			counter++;
 			System.out.println();
 		}
-		//print the numbers store in the arrays and the array's
-			//print that array location and the evenly initializes variable
-
-
-
-
 	}
 }
