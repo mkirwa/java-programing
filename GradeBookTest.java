@@ -1,14 +1,14 @@
 public class GradeBookTest{
 	
-	//declaring a variable to be used throught the program
+	//declaring a private variable 
+	//to be used to initialize the object data
 	private String courseName;
 	//declaring a constructor to initialize the objects data
-	//public GradeBookTest(String name){
-		//courseName = name;
-	//}
-
-	public void setCourseName(String userInput){
-		courseName = userInput;
+	public GradeBookTest(String name){
+		courseName = name;
+	}
+	public void setCourseName(String name){
+		courseName = name;
 	}
 	public String getCourseName(){
 		return courseName; 
