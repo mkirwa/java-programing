@@ -1,7 +1,15 @@
+import java.util.*;
+
 public class GradeBook{
+		
+		
 	public static void main(String[]args){
-		//constructors 
-		GradeBookTest newGradeBookTest = new GradeBookTest("Java");
-		newGradeBookTest.displayCourseName();
+		//Scanner input = new Scanner(System.in);
+		//System.out.println("enter the course name: ");
+		//String word = input.nextLine();
+
+		GradeBookTest myGradeBookTest = new GradeBookTest("csci 100");
+		myGradeBookTest.displaycourseName();
+
 	}
 }
