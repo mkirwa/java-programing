@@ -4,12 +4,10 @@ public class GradeBook{
 		
 		
 	public static void main(String[]args){
-		Scanner input = new Scanner(System.in);
-		System.out.println("enter the course name: ");
-		String word = input.nextLine();
-
-		GradeBookTest myGradeBookTest = new GradeBookTest();
-		myGradeBookTest.setCourseName(word);
+		//creating an instance of class GradebookTest
+		//class GradeBookTest takes in one argument 
+		//class GradeBookTest is of type GradebookTest
+		GradeBookTest myGradeBookTest = new GradeBookTest("CSCI 101");
 		myGradeBookTest.displaycourseName();
 
 	}
