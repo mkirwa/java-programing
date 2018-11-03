@@ -1,11 +1,11 @@
 public class GradeBookTest{
 	
 	//declaring a variable to be used throught the program
-	private String courseName;
+	//private String courseName;
 	//declaring a constructor to initialize the objects data
-	public GradeBookTest(String name){
-		courseName = name;
-	}
+	//public GradeBookTest(String name){
+		//courseName = name;
+	//}
 
 	public void setCourseName(String userInput){
 		courseName = userInput;
