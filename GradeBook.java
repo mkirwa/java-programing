@@ -4,11 +4,12 @@ public class GradeBook{
 		
 		
 	public static void main(String[]args){
-		//Scanner input = new Scanner(System.in);
-		//System.out.println("enter the course name: ");
-		//String word = input.nextLine();
+		Scanner input = new Scanner(System.in);
+		System.out.println("enter the course name: ");
+		String word = input.nextLine();
 
-		GradeBookTest myGradeBookTest = new GradeBookTest("csci 100");
+		GradeBookTest myGradeBookTest = new GradeBookTest("csci");
+		myGradeBookTest.setCourseName(word);
 		myGradeBookTest.displaycourseName();
 
 	}
