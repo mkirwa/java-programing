@@ -1,23 +1,20 @@
 public class GradeBookTest{
-	// constructor initializes courseName with String argument
+	
+	//declaring a variable to be used throught the program
 	private String courseName;
-	///constructor name is class name
-	public GradeBookTest(String name)
-	{
-			courseName = name;// initializes courseName
+	//declaring a constructor to initialize the objects data
+	public GradeBookTest(String name){
+		courseName = name;
 	}
-	// method to set the course name
-	public void setCourseName(String name)
-	{
-			courseName = name;// store the course name
+
+	public void setCourseName(String userInput){
+		courseName = userInput;
 	}
 	public String getCourseName(){
-		return courseName;
+		return courseName; 
 	}
-	public void displayCourseName(){
-		// this statement calls getCourseName to get the
-      	// name of the course this GradeBook represents
-		System.out.printf("Welcome to %s class\n",getCourseName());
+	public void displaycourseName(){
+		System.out.printf("welcome to : %s\n",getCourseName());
 	}
 
 }
