@@ -8,7 +8,7 @@ public class GradeBook{
 		System.out.println("enter the course name: ");
 		String word = input.nextLine();
 
-		GradeBookTest myGradeBookTest = new GradeBookTest("csci");
+		GradeBookTest myGradeBookTest = new GradeBookTest();
 		myGradeBookTest.setCourseName(word);
 		myGradeBookTest.displaycourseName();
 
