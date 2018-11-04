@@ -49,8 +49,12 @@ public class DictionaryPractise{
 		shoppingList.put("Sugar",false);
 		//retrieving items
 		System.out.println(shoppingList.get("Ham"));
-
-
+		//printing key-value pair
+		System.out.println(shoppingList.toString());
+		//clearing the dictionary
+		shoppingList.clear();
+		//checking whether the dictionaries are empty
+		System.out.println(shoppingList.isEmpty());
 
 	}
 }
