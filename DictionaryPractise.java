@@ -17,11 +17,13 @@ public class DictionaryPractise{
 		engspandictionary.put("Wednesday","Miercoles ");
 		engspandictionary.put("Thursday","Juves");
 		engspandictionary.put("Friday","Viernes");
-
+		//retrieving the values from the dictionary
 		System.out.println(engspandictionary.get("Monday"));
 		System.out.println(engspandictionary.get("Tuesday"));
 		System.out.println(engspandictionary.get("Wednesday"));
 		System.out.println(engspandictionary.get("Thursday"));
-		System.out.println(engspandictionary.get("Friday"));		
+		System.out.println(engspandictionary.get("Friday"));	
+		//print out all keys 
+		System.out.println(engspandictionary.keySet());	
 	}
 }
