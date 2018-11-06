@@ -19,7 +19,7 @@ public class RecursionGOODLUCK{
 	//4! ---> 4 * 3 * 2 * 1
 	public static int Factorial(int n){
 		//base case
-		if(n<=1){
+		if(n<=1){ //multiplicative identity
 			return 1; 
 		}
 		//Recursive case
@@ -35,9 +35,30 @@ public class RecursionGOODLUCK{
 			return n * Factorial(n-1);
 		}
 	}
+	//5^3 = 5 * 5 * 5 
+	//5^3 = 5 * 5^2 = 5 * 5 * 5^1 = 5 * 5 * 5 * 5^0 
+	//== 5 * 5 * 5 * 1
+	public static int Exponentiation(int n, int p){
+		//base case
+		if(p<=0){//multiplicative identity
+			return 1;
+		}
+		//recursive
+		else{
+			//5 * Exponentiation(5, 3-1)
+				//5 * Exponentiation(5, 2)
+			//5 * 5 * Exponentiation(5, 2-1)
+				//5 * Exponentiation(5, 1)
+			//5 * 5 * 5 * Exponentiation(5, 1-1)
+				//5 * 5 * 5 * Exponentiation(5, 0)
+			//5 * 5 * 5 * 1
+			return n * Exponentiation(n, p-1);
+		}
 
+	}
 	public static void main(String[]args){
 		System.out.println(Summation(4));
 		System.out.println(Factorial(4));
+		System.out.println(Exponentiation(5,3));
 	}
 }
