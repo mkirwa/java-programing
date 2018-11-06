@@ -15,12 +15,23 @@ public class RecursionGOODLUCK{
 			return n + Summation(n-1);
 		}
 	}
-
+	//5! ---> 5 * 4 * 3 * 2 * 1
+	//4! ---> 4 * 3 * 2 * 1
 	public static int Factorial(int n){
+		//base case
 		if(n<=1){
 			return 1; 
 		}
+		//Recursive case
 		else{
+			//4 * factorial(4-1)
+				//4 * factorial(3)
+			//4 * 3 * factorial(3-1)
+				//4 * 3 * factorial(2)
+			//4 * 3 * 3 * 2 * factorial(2-1)
+				//4 * 3 * 3 * 2 * factorial(1)
+			//4 * 3 * 3 * 2 * factorial(1==1)
+			//4 * 3 * 3 * 2 * 1
 			return n * Factorial(n-1);
 		}
 	}
