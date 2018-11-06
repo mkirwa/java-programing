@@ -1,0 +1,32 @@
+//recursion example
+public class RecursionGOODLUCK{
+
+	public static int Summation(int n){
+		//base case, we are at the end
+		if(n<=0){
+			return 0;//additive identity property at 0 
+		}
+		//Recursive case:  Keep going
+		else{
+		//3 + Summation(3-2=2)
+		//3 + 2 + Summation(2-1=1)
+		//3 + 2 + 1 + Summation(1-1=0)
+		//3 + 2 + 1 + 0
+			return n + Summation(n-1);
+		}
+	}
+
+	public static int Factorial(int n){
+		if(n<=1){
+			return 1; 
+		}
+		else{
+			return n * Factorial(n-1);
+		}
+	}
+
+	public static void main(String[]args){
+		System.out.println(Summation(4));
+		System.out.println(Factorial(4));
+	}
+}
