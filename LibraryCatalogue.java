@@ -143,7 +143,10 @@ public class LibraryCatalogue{
 		bookCollection.put();
 		//creating a new library catalogue 
 		LibraryCatalogue lib = new LibraryCatalogue(bookCollection);
-		lib.checkOutBook()
+		lib.checkOutBook("Harry Potter");
+		lib.setDay(17);
+		lib.returnBook("Harry Potter");
+		lib.checkOutBook("Harry Potter");
 
 	}
 }
