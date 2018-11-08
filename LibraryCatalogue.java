@@ -56,7 +56,7 @@ public class LibraryCatalogue{
 	//a second constructor...usually it's good to have one constructor because it gives you 
 	//less flexibility. Why would you want less flexibility as a programmer? It means there's 
 	//only one way to create things....The reason we are doing this is because we want more ways 
-	//to customize out constructor..we could just say we want the default you know, length of 
+	//to customize our constructor..we could just say we want the default you know, length of 
 	//checkout period all the stuff versus oh I want to set everything to the defaults why don't 
 	//I just have a constructor for that
 	public LibraryCatalogue(Map<String,Book> collection){
@@ -101,19 +101,49 @@ public class LibraryCatalogue{
 		Book book = getBook(title);
 		if(book.getIsCheckedOut()){
 			sorryBookAlreadyCheckedOut(book);
+		}else{
+			book.setIsCheckedOut(true,currentDay);
+			//so this should say..supposing the book title was Harry Potter
+			//You just checked out Harry Potter it is due on day (say the checkout length
+			//is 7 days and so if you checked out on day 5) 12  
+			System.out.println("You just checked out "+title+". It is due on day "+
+				(getCurrentDay()+getLengthOfCheckoutPeriod())+".");
 		}
 	}
 
 	public void returnBook(String title){
+		Book book = getBook(title);
+		//So what is this doing?
+		//so let's say our day is currently 12 minus the day that you checked out(lets say you 
+		//checked out on day 5) + the lengthof the check out period.. if the result is 0 then we
+		//are all good if it's negative then it was returned early and if it's positive then it
+		//was returned late. 
+		int daysLate = currentDay - (book.getDayCheckedOut()+getLengthOfCheckoutPeriod());
+		//to determine the late fee, we will just print something to the user.
+		if(daysLate>0){
+			System.out.println("You owe the Library $"+(getInitialLateFee()+daysLate*getFeePerLateDay())
+				+" because you book is "+daysLate+"days overdue.");
+		}else{
+			System.out.println("Book Returned.Thank you!");
+		}
+		book.setIsCheckedOut(false, -1);
 
 	}
 
 	public void sorryBookAlreadyCheckedOut(Book book){
-
+		System.out.println("Sorry, "+ book.getTitle()+ "is already checked out. 
+			"+"It should be back on day "+(book.getDayCheckedOut()+getLengthOfCheckoutPeriod())+".");
 	}
 
-
 	public static void main(String[]args){
+		//lets create a hashmap of books 
+		Map<String, Book>bookCollection = new HashMap<String, Book>();
+		//boo title, page count, ISBN
+		Book harry = new Book("Harry Potter",12345,999999);
+		bookCollection.put();
+		//creating a new library catalogue 
+		LibraryCatalogue lib = new LibraryCatalogue(bookCollection);
+		lib.checkOutBook()
 
 	}
 }
