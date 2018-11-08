@@ -44,9 +44,13 @@ public class LibraryCatalogue{
 	double feePerLateDay = 1.00;
 
 	//create a constructor 
-	public LibraryCatalogue(Map<String,Book> collection, double lengthOfCheckoutPeriod,
+	public LibraryCatalogue(Map<String,Book> collection, int lengthOfCheckoutPeriod,
 	 double initialLateFee, double feePerLateDay){
 
+		this.bookCollection = collection;
+		this.lengthOfCheckoutPeriod = lengthOfCheckoutPeriod;
+		this.initialLateFee = initialLateFee;
+		this.feePerLateDay = feePerLateDay;
 	}
 	//some of this are already defaults and so to make it a little easier we are gonna create 
 	//a second constructor...usually it's good to have one constructor because it gives you 
@@ -56,6 +60,8 @@ public class LibraryCatalogue{
 	//checkout period all the stuff versus oh I want to set everything to the defaults why don't 
 	//I just have a constructor for that
 	public LibraryCatalogue(Map<String,Book> collection){
+		this.bookCollection = collection; 
+	}
 
 
 
