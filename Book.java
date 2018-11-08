@@ -45,7 +45,7 @@ public class Book{
 	public boolean getisCheckedOut(boolean){
 		return this.isCheckedOut;
 	}
-	public int getdayCheckedOut(boolean){
+	public int getDayCheckedOut(boolean){
 		return this.dayCheckedout;
 	}
 
