@@ -63,6 +63,29 @@ public class LibraryCatalogue{
 		this.bookCollection = collection; 
 	}
 
+	//getters
+	public int getCurrentDay(){	
+		return this.currentDay;
+	}
+	public Map<String,Book> getBookCollection(){
+		return this.bookCollection;
+	}
+	public Book getBook(String bookTitle){
+		return getBookCollection().get(bookTitle);
+	}
+
+	public int getLengthOfCheckoutPeriod(){
+		return this.lengthOfCheckoutPeriod;
+	}
+
+	public int getInitialLateFee(){
+		return this.initialLateFee;
+	}
+
+	public double getFeePerLateDay(){
+		return this.feePerLateDay;
+	}
+
 
 
 	public static void main(String[]args){
