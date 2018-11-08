@@ -86,6 +86,31 @@ public class LibraryCatalogue{
 		return this.feePerLateDay;
 	}
 
+	//setters
+	public void nextDay(){
+		currentDay++;
+	}
+	public void setDay(){
+		currentDay = day;
+	}
+
+	//methods...
+	//instance methods
+
+	public void checkOutBook(String title){
+		Book book = getBook(title);
+		if(book.getIsCheckedOut()){
+			sorryBookAlreadyCheckedOut(book);
+		}
+	}
+
+	public void returnBook(String title){
+
+	}
+
+	public void sorryBookAlreadyCheckedOut(Book book){
+
+	}
 
 
 	public static void main(String[]args){
