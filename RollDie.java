@@ -13,7 +13,6 @@ public class RollDie{
 		}
 
 		System.out.printf("%s%10s\n","Face","frequency");
-
 			//output each array element's value 
 
 		for(int face = 1; face<frequency.length; face++){
