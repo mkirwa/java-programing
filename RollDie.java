@@ -8,10 +8,10 @@ public class RollDie{
 		int frequency[] = new int [7];
 		//roll die 6,000,000 times; use die value as frequency
 		for(int roll = 1; roll<=6000000; roll++)
-			
+
 			++frequency[1+randomNumbers.nextInt(6)];
 
-			System.out.printf("%s%10s\n","Face","frequency");
+		System.out.printf("%s%10s\n","Face","frequency");
 
 			//output each array element's value 
 
