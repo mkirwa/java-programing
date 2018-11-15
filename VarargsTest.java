@@ -22,6 +22,8 @@ public class VarargsTest{
 		double d3 = 30;
 		double d4 = 40;
 
-		System.out.printf("the average of d1%d and d2%d is: %d2\n",d1,d1,average(d1,d2))
+		System.out.printf("the average of %.1f and %.1f is: %.1f\n",d1,d2,average(d1,d2));
+		System.out.printf("the average of %.1f, %.1f and %.1f is: %.1f\n",d1,d2,d3,average(d1,d2,d3));
+
 	}
 }
